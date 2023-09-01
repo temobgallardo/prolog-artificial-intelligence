@@ -47,7 +47,7 @@ class numeroIgualASumaCudradoDeDigitosEsto(object):
     self.rewards = [0] * self.max
     x = random.randint(0, suitable)
     i = 0
-    previous = 9*9*3
+    previous = suitable
     already_computed = np.zeros(suitable)
     while i < suitable + 1:
       if already_computed[x] > 0: 
@@ -58,18 +58,14 @@ class numeroIgualASumaCudradoDeDigitosEsto(object):
 
       result = self.squareAndSumRecursive(x)
       already_computed[x] += 1
-      #self.previous_sum_squares.append(result)
 
       if result == x:
         self.previous_sum_squares.append(int(result)) 
         self.rewards[result] += 10
         continue
 
-      #size = len(self.previous_sum_squares)
-      #c_v = self.previous_sum_squares[size - 2]
-
       # if previous is smaller then we try to compute the next value (it may get closer)
-      # otherwise we continue try previous
+      # otherwise we continue to try previous
       if result <= previous:
         self.rewards[x] += 1
         previous = result;
