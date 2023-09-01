@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{6d0c6eb1-c186-45ed-8333-e0e68fa7aade}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>NumeroIgualASumaCudradoDeDigitos.py</StartupFile>
+    <StartupFile>NumeroIgualASumaCudradoDeDigitosEsto.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -19,9 +19,10 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="NumeroIgualASumaCudradoDeDigitos..txt" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="class1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NumeroIgualASumaCudradoDeDigitosEsto.py" />
     <Compile Include="NumeroIgualASumaCudradoDeDigitos.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

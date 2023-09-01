@@ -9,6 +9,10 @@ def CheckSuitableValues(max):
     while max >= 0:
         numDigits = CheckMaxPossibleValuesDueToNumberOfDigits(max)
         maxToCompute = 9*9*numDigits
+        # above is equivalent as below
+        #v = [9] * numDigits
+        #for a in v: maxToCompute += a*a
+
         if maxToCompute > max:
             break
         max = max / 10
