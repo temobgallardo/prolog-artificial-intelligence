@@ -102,3 +102,15 @@ sobrino(R, S):-
     S \== R,
     hombre(S),
     (tia(S, R); tio(S, R)).
+
+hermanos(Y, X):-
+    Y \== X,
+    hermana(Y, X);
+    hermano(Y, X).
+
+% J) X y Y son pareja si han tenido por lo menos un hijo
+pareja(Y, X):-
+    Y \== X,
+    not(hermanos(Y, X)),
+    ((mujer(Y), madre(HO, Y), padre(HO, X));
+    (padre(HA, Y), madre(HA, X))).
