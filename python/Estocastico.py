@@ -1,6 +1,10 @@
 import random
 import numpy as np
 
+# Tarea 1: Encontrar los numeros entre 50 (aunque aquí inicio en 0) y 10,000 que son iguales
+# a la suma del cuadrado de sus digitos por método:
+# 1. Sistemático
+# 2. Estocástico
 class numeroIgualASumaCudradoDeDigitosEsto(object):
   previous_sum_squares = [9*9*4]
   rewards = []
